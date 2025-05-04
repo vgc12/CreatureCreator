@@ -1,7 +1,7 @@
-﻿import { DIET_TYPE, DietType } from './diet-type.js';
-import { randomInt } from './math-utils.js';
+﻿import { DIET_TYPE, DietType } from './diet-type';
+import { randomInt } from './math-utils';
 
-
+// This is a type that represents a hybrid animal with all the properties
 export type HybridAnimal = {
   name: string;
   weight: number;
@@ -9,12 +9,14 @@ export type HybridAnimal = {
   age: number;
 };
 
+// This is a class that represents a builder for a hybrid animal
 export class HybridAnimalBuilder {
   public name: string;
   public weight: number;
   public diet: DietType
   public age: number;
 
+  // Constructor that takes two animal names and generates a hybrid animal name
   constructor(name1: string, name2: string) {
     let splitName1 = this.splitName(name1);
     let splitName2 = this.splitName(name2);
@@ -25,6 +27,7 @@ export class HybridAnimalBuilder {
     this.age = 0;
   }
 
+  //
   splitName(name: string): string[] {
     let index = randomInt(1, name.length - 1);
     return [name.slice(0, index), name.slice(index)];

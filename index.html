@@ -22,39 +22,61 @@
   <div class="form-floating mb-3">
     <input type="text" class="form-control" id="AnimalOne" placeholder="Unicorn" required>
     <label class="form-label" for="AnimalOne">First Animal</label>
-    <div class="invalid-feedback">Please enter an animal</div>
+    <div id="AnimalOneErrorBox" class="invalid-feedback">Please enter an animal</div>
   </div>
   <div class="form-floating mb-3">
     <input type="text" class="form-control" id="AnimalTwo" placeholder="Tyrannosaurus Rex" required>
     <label class="form-label" for="AnimalTwo">Second Animal</label>
-    <div class="invalid-feedback">Please enter an animal</div>
+    <div id="AnimalTwoErrorBox" class="invalid-feedback">Please enter an animal</div>
 
   </div>
 
-  <button class="btn btn-primary w-100 py-2" data-bs-toggle="modal" data-bs-target="#exampleModal" id="generateAnimal" >Generate</button>
+  <button class="btn btn-primary w-100 py-2"  id="generateAnimal" >Generate</button>
 
 </div>
 
 
   </div>
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="AnimalModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Animal Information:</h5>
+        <div class="modal-header text-center">
+          <h5 class="modal-title" id="exampleModalLabel">Animal Information</h5>
         </div>
         <div class="modal-body">
-          <label for="AnimalName" class="form-label">Animal Name:</label>
-          <input type="text" class="form-control" id="AnimalName" readonly placeholder="Animal Name">
-          <label for="AnimalDiet" class="form-label">Diet Type:</label>
-          <input type="text" class="form-control" id="AnimalDiet" readonly placeholder="Diet Type">
-          <label for="AnimalWeight" class="form-label">Weight:</label>
-          <input type="text" class="form-control" id="AnimalWeight" readonly placeholder="Weight">
-          <label for="AnimalAge" class="form-label">Age:</label>
-          <input type="text" class="form-control" id="AnimalAge" readonly placeholder="Age">
-
-        </div>
+          <div class="mb-3 row">
+            <div class="col-sm-3 p-1 ">
+            <label for="AnimalName" class="border-2">Animal Name:</label>
+            </div>
+            <div class="col-sm-9 p-1 h-auto">
+              <input type="text" class="form-control" id="AnimalName" readonly placeholder="Animal Name">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-3 p-1 ">
+              <label for="AnimalDiet" class="border-2">Animal Diet:</label>
+            </div>
+            <div class="col-sm-9 p-1 h-auto">
+              <input type="text" class="form-control" id="AnimalDiet" readonly placeholder="Animal Diet">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-3 p-1 ">
+              <label for="AnimalAge" class="border-2">Animal Age:</label>
+            </div>
+            <div class="col-sm-9 p-1 h-auto">
+              <input type="text" class="form-control" id="AnimalAge" readonly placeholder="Animal Name">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <div class="col-sm-3 p-1 ">
+              <label for="AnimalWeight" class="border-2">Animal Weight:</label>
+            </div>
+            <div class="col-sm-9 p-1 h-auto">
+              <input type="text" class="form-control" id="AnimalWeight" readonly placeholder="Animal Weight">
+            </div>
+          </div>
 
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -62,17 +84,11 @@
       </div>
     </div>
   </div>
+  </div>
   </main>
 
-<!--
-<script type="module" src="dist/math-utils.js"></script>
-<script type="module" src="dist/diet-type.js"></script>
-<script type="module" src="dist/hybrid-animal.js"></script>
-<script type="module" src="dist/index.js"></script>
--->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-<script type="module" src = "dist/main.js"></script>
+<script type="module" src = "src/js/main.js"></script>
 
 
 </body>
